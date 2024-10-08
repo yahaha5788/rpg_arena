@@ -1,6 +1,5 @@
 from charBase.character import characterBase
 from random import randint
-from engine import usern, target, p1morphed, p2morphed
 
 class werewolf(characterBase):
 

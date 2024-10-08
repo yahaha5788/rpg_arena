@@ -1,6 +1,10 @@
 from charBase.character import characterBase
 from random import randint
-from engine import usern, target
+
+usern = None
+p1morphed = None
+p2morphed = None
+target = None
 
 class human(characterBase):
 

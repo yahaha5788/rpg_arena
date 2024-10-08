@@ -1,4 +1,4 @@
-from characters.human import human
+from characters import human
 from characters import knight
 from characters import brute
 from characters import elf
@@ -7,14 +7,14 @@ from characters import werewolf
 #initializations for characters
 human1 = human("Human1", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180, "normal", 0)
 human2 = human("Human2", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180,"normal", 0)
-knight1 = knight.knight("Knight1", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215, "normal", 0)
-knight2 = knight.knight("Knight2", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215,"normal", 0)
-brute1 = brute.brute("Brute1", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,"normal", 0)
-brute2 = brute.brute("Brute2", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,"normal", 0)
-elf1 = elf.elf("Elf1", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145, "normal", 0)
-elf2 = elf.elf("Elf2", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145,"normal", 0)
-werewolf1 = werewolf.werewolf("Werewolf1", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, "normal", 6)
-werewolf2 = werewolf .werewolf("Werewolf2", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, "normal", 6)
+knight1 = knight("Knight1", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215, "normal", 0)
+knight2 = knight("Knight2", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215,"normal", 0)
+brute1 = brute("Brute1", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,"normal", 0)
+brute2 = brute("Brute2", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,"normal", 0)
+elf1 = elf("Elf1", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145, "normal", 0)
+elf2 = elf("Elf2", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145,"normal", 0)
+werewolf1 = werewolf("Werewolf1", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, "normal", 6)
+werewolf2 = werewolf("Werewolf2", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, "normal", 6)
 
 playing = True
 choosing1 = True

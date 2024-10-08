@@ -1,5 +1,4 @@
 from random import randint
-from engine import usern
 
 class characterBase:
     def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, state, morphtimeavailable):
