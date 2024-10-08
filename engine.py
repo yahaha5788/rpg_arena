@@ -4,6 +4,7 @@ from characters import brute
 from characters import elf
 from characters import werewolf
 
+#initializations for characters
 human1 = human("Human1", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180, "normal", 0)
 human2 = human("Human2", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180,"normal", 0)
 knight1 = knight.knight("Knight1", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215, "normal", 0)
