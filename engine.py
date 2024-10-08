@@ -1,11 +1,11 @@
-from characters import human
+from characters.human import human
 from characters import knight
 from characters import brute
 from characters import elf
 from characters import werewolf
 
-human1 = human.human("Human1", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180, "normal", 0)
-human2 = human.human("Human2", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180,"normal", 0)
+human1 = human("Human1", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180, "normal", 0)
+human2 = human("Human2", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180,"normal", 0)
 knight1 = knight.knight("Knight1", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215, "normal", 0)
 knight2 = knight.knight("Knight2", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215,"normal", 0)
 brute1 = brute.brute("Brute1", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,"normal", 0)

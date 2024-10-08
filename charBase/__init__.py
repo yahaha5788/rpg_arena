@@ -1,1 +1,1 @@
-from charBase import character
+from .character import characterBase
