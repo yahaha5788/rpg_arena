@@ -50,7 +50,7 @@ class characterBase:
             return 0
 
     def bodyslamAttack(self, target):
-        hits = randint(0, 4)
+        hits = randint(0, 2)
         if hits == 0:
             damagemultiplier = self.weight / 16
             damage = 1.8 * damagemultiplier
@@ -62,4 +62,8 @@ class characterBase:
             print(f"{self.usern}'s attack missed!")
             self_damage = self.health / 13
             self.health -= self_damage
-            return 0
+            print(f"{self.usern} did {self_damage} damage to themselves")
+            return self_damage
+
+    def damageCounter(self, damage):
+        print(f"{self.usern}")
