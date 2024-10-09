@@ -16,13 +16,18 @@ elf2 = elf("Elf2", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145,"normal", 0)
 werewolf1 = werewolf("Werewolf1", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, "normal", 6)
 werewolf2 = werewolf("Werewolf2", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, "normal", 6)
 
-playing = True
 choosing1 = True
 choosing2 = True
-p1morphturnsleft = 0
-p2morphturnsleft = 0
-p1morphed = False
-p2morphed = False
+playing = True
+global p1morphed
+global p2morphed
+global p1morphturnsleft
+global p2morphturnsleft
+global usern
+global target
+
+
+
 
 while playing:
     print("""

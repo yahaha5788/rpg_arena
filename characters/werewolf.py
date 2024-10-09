@@ -47,60 +47,18 @@ class werewolf(characterBase):
         choosingmove = True
 
         while choosingmove:
-            if usern == 'Player 1':
-                if p1morphed == True:
-                    move = input("""
-                                Available moves:
+            move = input("""                          
+            Available moves:
 
-                                Punch
-                                KicK
-                                Bodyslam
-                                Morph
-                                Bite
-                                Scratch
+            Punch
+            KicK
+            Bodyslam
+            Morph
+            Bite (requires morph)
+            Scratch (requires morph)
 
-                                Select your move: 
-                                """)
-                else:
-                    move = input("""
-                                Available moves:
-
-                                Punch
-                                KicK
-                                Bodyslam
-                                Morph
-                                Bite (requires morph)
-                                Scratch (requires morph)
-
-                                Select your move: 
-                                """)
-            elif usern == 'Player 2':
-                if p2morphed == True:
-                    move = input("""
-                                Available moves:
-
-                                Punch
-                                KicK
-                                Bodyslam
-                                Morph
-                                Bite
-                                Scratch
-
-                                Select your move: 
-                                """)
-                else:
-                    move = input("""
-                                Available moves:
-
-                                Punch
-                                KicK
-                                Bodyslam
-                                Morph
-                                Bite (requires morph)
-                                Scratch (requires morph)
-
-                                Select your move: 
-                                """)
+            Select your move: 
+            """)
             if move.lower() == 'punch':
                 self.punchAttack(target); break
             elif move.lower() == 'kick':

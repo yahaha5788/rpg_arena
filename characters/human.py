@@ -1,13 +1,7 @@
 from charBase.character import characterBase
 from random import randint
 
-usern = None
-p1morphed = None
-p2morphed = None
-target = None
-
 class human(characterBase):
-
     def stabAttack(self, target):
         hits = randint(0, self.accuracy + 3)
         if hits != 0:
