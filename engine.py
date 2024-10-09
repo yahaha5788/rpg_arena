@@ -1,8 +1,8 @@
-from characters import human
-from characters import knight
-from characters import brute
-from characters import elf
-from characters import werewolf
+from arenacharacters import human
+from arenacharacters import knight
+from arenacharacters import brute
+from arenacharacters import elf
+from arenacharacters import werewolf
 
 #initializations for characters
 human1 = human("Human1", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180, 'player2', 'Player 1', 'Player 2')

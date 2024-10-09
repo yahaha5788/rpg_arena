@@ -1,4 +1,4 @@
-from charBase.character import characterBase
+from .character import characterBase
 from random import randint
 
 class werewolf(characterBase):

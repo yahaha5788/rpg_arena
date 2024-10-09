@@ -1,12 +1,12 @@
-from charBase.character import characterBase
+from .character import characterBase
 from random import randint
 
 
-class human(characterBase):
+class knight(characterBase):
     def stabAttack(self, target):
-        hits = randint(0, self.accuracy + 3)
+        hits = randint(0, self.accuracy - 1)
         if hits != 0:
-            damage = self.strength * 1.3
+            damage = self.strength * 1.5
             damage_dealt = target.takeDamage(damage)
             self.damageCounter(damage_dealt)
             return damage_dealt
@@ -19,7 +19,7 @@ class human(characterBase):
         if hits != 0:
             avgmultiplier = self.strength * self.dexterity
             avgmultiplier /= 13
-            damage = 1.3 * avgmultiplier
+            damage = 1.6 * avgmultiplier
             damage_dealt = target.takeDamage(damage)
             self.damageCounter(damage_dealt)
             return damage_dealt
@@ -35,7 +35,7 @@ class human(characterBase):
             Available moves:
 
             Punch
-            KicK
+            Kick
             Bodyslam
             Stab
             Slash
@@ -45,7 +45,7 @@ class human(characterBase):
             if move.lower() == 'punch':
                 self.punchAttack(self.target); break
             elif move.lower() == 'kick':
-                self.kickAttack(self.target); break
+                self.kickAttack(self.target);break
             elif move.lower() == 'bodyslam':
                 self.bodyslamAttack(self.target); break
             elif move.lower() == 'stab':
@@ -56,5 +56,3 @@ class human(characterBase):
                 print('Invalid input.')
 
         return 0
-
-

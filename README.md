@@ -15,6 +15,5 @@ Run the `engine.py` file to play.
 
 ## Current Version
 
-##### Version 1.2.0
-Added damageCounter and selfDamageCounter, for printing damage dealt to target and user.
-
+##### Version 1.2.1
+Condensed `characters` and `charBase` into one directory, titled `arenacharacters`

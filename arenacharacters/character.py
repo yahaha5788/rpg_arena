@@ -1,6 +1,5 @@
 from random import randint
 
-
 class characterBase:
     def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, target, usern, targetn):
         self.name = name
