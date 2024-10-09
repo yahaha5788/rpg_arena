@@ -13,8 +13,8 @@ Different moves and stats for each character
 ### Usage
 Run the `engine.py` file to play.
 
-## Updates
+## Current Version
 
-##### Version 1.0.0
-Project was created, first working version
+##### Version 1.2.0
+Added damageCounter and selfDamageCounter, for printing damage dealt to target and user.
 
