@@ -11,6 +11,8 @@ class brute(characterBase):
             damage_dealt = target.takeDamage(damage)
             self_damage = ceiling(damage_dealt / 17)
             self.health -= self_damage
+            self.damageCounter(damage_dealt)
+            self.selfDamageCounter(self_damage)
             return damage_dealt
         else:
             print(f"{self.usern}'s move missed!")

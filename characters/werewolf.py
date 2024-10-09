@@ -36,6 +36,7 @@ class werewolf(characterBase):
             if hits != 0:
                 damage = self.strength * 1.2
                 damage_dealt = target.takeDamage(damage)
+                self.damageCounter(damage_dealt)
                 return damage_dealt
             else:
                 print(f"{self.usern}'s move missed!")
@@ -49,6 +50,7 @@ class werewolf(characterBase):
             if hits != 0:
                 damage = self.strength * 1.5
                 damage_dealt = target.takeDamage(damage)
+                self.damageCounter(damage_dealt)
                 return damage_dealt
             else:
                 print(f"{self.usern}'s move missed!")

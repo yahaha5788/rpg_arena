@@ -7,6 +7,7 @@ class human(characterBase):
         if hits != 0:
             damage = self.strength * 1.3
             damage_dealt = target.takeDamage(damage)
+            self.damageCounter(damage_dealt)
             return damage_dealt
         else:
             print(f"{self.usern}'s move missed!")
@@ -19,6 +20,7 @@ class human(characterBase):
             avgmultiplier /= 13
             damage = 1.3 * avgmultiplier
             damage_dealt = target.takeDamage(damage)
+            self.damageCounter(damage_dealt)
             return damage_dealt
         else:
             print(f"{self.usern}'s move missed!")

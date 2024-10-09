@@ -1,7 +1,7 @@
 from random import randint
 
 class characterBase:
-    def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, target, usern):
+    def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, target, usern, targetn):
         self.name = name
         self.strength = strength #multiplier for physical moves, should be around 10
         self.health = health #health should be at least 100
@@ -15,6 +15,7 @@ class characterBase:
         self.weight = weight #used for bodyslam
         self.target = target
         self.usern = usern
+        self.targetn = targetn
 
     def isAlive(self):
         return self.health > 0
@@ -37,6 +38,7 @@ class characterBase:
     def punchAttack(self, target):
         damage = 1.3 * self.getStrengthVariation()
         damage_dealt = target.takeDamage(damage)
+        self.damageCounter(damage_dealt)
         return damage_dealt
 
     def kickAttack(self, target):
@@ -44,6 +46,7 @@ class characterBase:
         if hits != 0:
             damage = 1.5 * self.strength
             damage_dealt = target.takeDamage(damage)
+            self.damageCounter(damage_dealt)
             return damage_dealt
         else:
             print(f"{self.usern}'s attack missed!")
@@ -57,13 +60,18 @@ class characterBase:
             damage_dealt = target.takeDamage(damage)
             self_damage = self.health / 18
             self.health -= self_damage
+            self.damageCounter(damage_dealt)
+            self.selfDamageCounter(self_damage)
             return damage_dealt
         else:
             print(f"{self.usern}'s attack missed!")
             self_damage = self.health / 13
             self.health -= self_damage
-            print(f"{self.usern} did {self_damage} damage to themselves")
+            self.selfDamageCounter(self_damage)
             return self_damage
 
     def damageCounter(self, damage):
-        print(f"{self.usern}")
+        print(f"{self.usern} dealt {damage} damage to {self.targetn}.")
+
+    def selfDamageCounter(self, selfdamage):
+        print(f"{self.usern} dealt {selfdamage} damage to themselves.")
