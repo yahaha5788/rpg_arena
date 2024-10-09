@@ -9,7 +9,7 @@ class human(characterBase):
             damage_dealt = target.takeDamage(damage)
             return damage_dealt
         else:
-            print(f"{usern}'s move missed!")
+            print(f"{self.usern}'s move missed!")
             return 0
 
     def slashAttack(self, target):
@@ -21,7 +21,7 @@ class human(characterBase):
             damage_dealt = target.takeDamage(damage)
             return damage_dealt
         else:
-            print(f"{usern}'s move missed!")
+            print(f"{self.usern}'s move missed!")
             return 0
 
     def moveSelect(self):
@@ -40,15 +40,15 @@ class human(characterBase):
             Select your move: 
             """)
             if move.lower() == 'punch':
-                self.punchAttack(target); break
+                self.punchAttack(self.target); break
             elif move.lower() == 'kick':
-                self.kickAttack(target); break
+                self.kickAttack(self.target); break
             elif move.lower() == 'bodyslam':
-                self.bodyslamAttack(target); break
+                self.bodyslamAttack(self.target); break
             elif move.lower() == 'stab':
-                self.stabAttack(target); break
+                self.stabAttack(self.target); break
             elif move.lower() == 'slash':
-                self.slashAttack(target); break
+                self.slashAttack(self.target); break
             else:
                 print('Invalid input.')
 

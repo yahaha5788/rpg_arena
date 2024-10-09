@@ -33,13 +33,13 @@ class elf(characterBase):
             Select your move: 
             """)
             if move.lower() == 'punch':
-                self.punchAttack(target); break
+                self.punchAttack(self.target); break
             elif move.lower() == 'kick':
-                self.kickAttack(target); break
+                self.kickAttack(self.target); break
             elif move.lower() == 'bodyslam':
-                self.bodyslamAttack(target); break
+                self.bodyslamAttack(self.target); break
             elif move.lower() == 'magic':
-                self.magicAttack(target); break
+                self.magicAttack(self.target); break
             elif move.lower() == 'heal':
                 self.heal(); break
             else:

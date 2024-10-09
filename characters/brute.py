@@ -13,7 +13,7 @@ class brute(characterBase):
             self.health -= self_damage
             return damage_dealt
         else:
-            print(f"{usern}'s move missed!")
+            print(f"{self.usern}'s move missed!")
 
     def moveSelect(self):
         choosingmove = True
@@ -30,13 +30,13 @@ class brute(characterBase):
             Select your move: 
             """)
             if move.lower() == 'punch':
-                self.punchAttack(target); break
+                self.punchAttack(self.target); break
             elif move.lower() == 'kick':
-                self.kickAttack(target); break
+                self.kickAttack(self.target); break
             elif move.lower() == 'bodyslam':
-                self.bodyslamAttack(target); break
+                self.bodyslamAttack(self.target); break
             elif move.lower() == 'overpower':
-                self.overpower(target); break
+                self.overpower(self.target); break
             else:
                 print('Invalid input.')
 

@@ -5,29 +5,20 @@ from characters import elf
 from characters import werewolf
 
 #initializations for characters
-human1 = human("Human1", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180, "normal", 0)
-human2 = human("Human2", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180,"normal", 0)
-knight1 = knight("Knight1", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215, "normal", 0)
-knight2 = knight("Knight2", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215,"normal", 0)
-brute1 = brute("Brute1", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,"normal", 0)
-brute2 = brute("Brute2", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,"normal", 0)
-elf1 = elf("Elf1", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145, "normal", 0)
-elf2 = elf("Elf2", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145,"normal", 0)
-werewolf1 = werewolf("Werewolf1", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, "normal", 6)
-werewolf2 = werewolf("Werewolf2", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, "normal", 6)
+human1 = human("Human1", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180, 'player2', 'Player 1')
+human2 = human("Human2", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180,'player1', 'Player 2')
+knight1 = knight("Knight1", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215, 'player2', 'Player 1')
+knight2 = knight("Knight2", 13, 100, 100, 12, 7, 9, 8, 13, 9, 215,'player1', 'PLayer 2')
+brute1 = brute("Brute1", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,'player2', "Player 1")
+brute2 = brute("Brute2", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,'player1', 'Player 2')
+elf1 = elf("Elf1", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145, 'player2', 'Player 1')
+elf2 = elf("Elf2", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145,'player1', 'Player 2')
+werewolf1 = werewolf("Werewolf1", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, False, 6, 0, 'player2', 'Player 1')
+werewolf2 = werewolf("Werewolf2", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, False, 6, 0, 'player1', 'Player 2')
 
 choosing1 = True
 choosing2 = True
 playing = True
-global p1morphed
-global p2morphed
-global p1morphturnsleft
-global p2morphturnsleft
-global usern
-global target
-
-
-
 
 while playing:
     print("""
@@ -88,27 +79,19 @@ while playing:
         else:
             print("Invalid input")
 
+    player1.target = player2
+    player2.target = player1
+
     while player1.isAlive() and player2.isAlive():
         turn_number = 0
         print("Player 1's turn")
-        target = player2; user = player1; usern = 'Player 1'
         player1.moveSelect()
         print("Player 2's turn")
-        target = player1; user = player2; usern = 'Player 2'
         player2.moveSelect()
         print(f"Player 1's health ({character1}): " + str(player1.health))
         print(f"Player 2's health ({character2}): " + str(player2.health))
         turn_number += 1
         print(f'Number of turns so far: {turn_number}')
-        if character1 or character2 == 'Werewolf':
-            if player1.name == 'Werewolf1':
-                p1morphturnsleft -= 1
-                if p1morphturnsleft  <= 0:
-                    p1morphed = False
-            if player2.name == 'Werewolf2':
-                p2morphturnsleft -= 1
-                if p2morphturnsleft <= 0:
-                    p2morphed = False
 
     if player1.isAlive and not player2.isAlive():
         print("Player 1 wins!")

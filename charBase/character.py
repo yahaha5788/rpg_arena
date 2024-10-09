@@ -1,7 +1,7 @@
 from random import randint
 
 class characterBase:
-    def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, state, morphtimeavailable):
+    def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, target, usern):
         self.name = name
         self.strength = strength #multiplier for physical moves, should be around 10
         self.health = health #health should be at least 100
@@ -12,9 +12,9 @@ class characterBase:
         self.dexterity = dexterity #dexterity is a number from 10 to 20, stat for handheld item accuracy (stab, slash attacks)
         self.constitution = constitution #constitution should be a number around 10, is defense for takeDamageFromMagic
         self.accuracy = accuracy #accuracy is a number around 7 - 9, used in randint(0, accuracy) to check if the move hits or not
-        self.state = state
-        self.morphtimeavailable = morphtimeavailable
         self.weight = weight #used for bodyslam
+        self.target = target
+        self.usern = usern
 
     def isAlive(self):
         return self.health > 0
@@ -46,7 +46,7 @@ class characterBase:
             damage_dealt = target.takeDamage(damage)
             return damage_dealt
         else:
-            print(f"{usern}'s attack missed!")
+            print(f"{self.usern}'s attack missed!")
             return 0
 
     def bodyslamAttack(self, target):
@@ -59,7 +59,7 @@ class characterBase:
             self.health -= self_damage
             return damage_dealt
         else:
-            print(f"{usern}'s attack missed!")
+            print(f"{self.usern}'s attack missed!")
             self_damage = self.health / 13
             self.health -= self_damage
             return 0
