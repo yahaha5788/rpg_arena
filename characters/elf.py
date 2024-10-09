@@ -1,6 +1,7 @@
 from charBase.character import characterBase
 from random import randint
 
+
 class elf(characterBase):
 
     def magicAttack(self, target):

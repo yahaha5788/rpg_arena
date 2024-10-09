@@ -2,6 +2,7 @@ from charBase.character import characterBase
 from random import randint
 from math import ceil as ceiling
 
+
 class brute(characterBase):
 
     def overpower(self, target):

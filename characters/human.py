@@ -1,6 +1,7 @@
 from charBase.character import characterBase
 from random import randint
 
+
 class human(characterBase):
     def stabAttack(self, target):
         hits = randint(0, self.accuracy + 3)

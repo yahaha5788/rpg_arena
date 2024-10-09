@@ -3,7 +3,7 @@ from random import randint
 
 class werewolf(characterBase):
 
-    def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, morphed, morphtimeavailable, morphturnsleft, target, usern):
+    def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, morphed, morphtimeavailable, morphturnsleft, target, usern, targetn):
         self.name = name
         self.strength = strength #multiplier for physical moves, should be around 10
         self.health = health #health should be at least 100
@@ -20,6 +20,7 @@ class werewolf(characterBase):
         self.target = target
         self.usern = usern
         self.morphturnsleft = morphturnsleft #set to 0
+        self.targetn = targetn
 
 
     def morph(self, turns):
