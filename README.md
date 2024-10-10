@@ -15,5 +15,6 @@ The `engine.py` file contains all code used to run the program, and it reads the
 contained in `arenacharacters`. `arenacharacters` handles all the moves and functions of the characters.
 
 ## Current Version
-##### Version 1.3.1
-Added `dwarf` class and character
+##### Version 1.3.2
+Fixed issue with players being able to have negative health before end of turn.
+

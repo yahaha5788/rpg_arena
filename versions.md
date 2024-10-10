@@ -9,3 +9,6 @@ Condensed `characters` and `charBase` into one directory, titled `arenacharacter
 
 #### Version 1.3.1
 Added `dwarf` class and character
+
+#### Version 1.3.2
+Fixed issue with players being able to have negative health before end of turn
