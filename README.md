@@ -15,6 +15,6 @@ The `engine.py` file contains all code used to run the program, and it reads the
 contained in `arenacharacters`. `arenacharacters` handles all the moves and functions of the characters.
 
 ## Current Version
-##### Version 1.1.3
+##### Version 1.1.4
 Fixed issue with players being able to have negative health before end of turn.
 
