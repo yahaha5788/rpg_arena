@@ -6,7 +6,7 @@ class knight(characterBase):
     def stabAttack(self, target):
         hits = randint(0, self.accuracy - 1)
         if hits != 0:
-            damage = self.strength * 1.5
+            damage = self.getStrengthVariation() * 1.5
             damage_dealt = target.takeDamage(damage)
             self.damageCounter(damage_dealt)
             return damage_dealt
@@ -17,7 +17,7 @@ class knight(characterBase):
     def slashAttack(self, target):
         hits = randint(0, self.accuracy)
         if hits != 0:
-            avgmultiplier = self.strength * self.dexterity
+            avgmultiplier = self.getStrengthVariation() * self.dexterity
             avgmultiplier /= 13
             damage = 1.6 * avgmultiplier
             damage_dealt = target.takeDamage(damage)

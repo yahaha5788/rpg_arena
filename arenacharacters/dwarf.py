@@ -1,22 +1,20 @@
-from .character import characterBase
 from random import randint
-from math import ceil as ceiling
+from .character import characterBase
 
+class dwarf(characterBase):
 
-class brute(characterBase):
-
-    def overpower(self, target):
-        hits = randint(0, 3)
-        if hits == 0:
-            damage = self.getStrengthVariation() * 1.8
+    def axeSlice(self, target):
+        hits = randint(0, 9)
+        if hits != 0:
+            damageaverage = self.dexterity * self.getStrengthVariation()
+            damageaverage /= 12
+            damage = damageaverage * 1.3
             damage_dealt = target.takeDamage(damage)
-            self_damage = ceiling(damage_dealt / 17)
-            self.health -= self_damage
             self.damageCounter(damage_dealt)
-            self.selfDamageCounter(self_damage)
             return damage_dealt
         else:
             print(f"{self.usern}'s move missed!")
+            return 0
 
     def moveSelect(self):
         choosingmove = True
@@ -26,9 +24,9 @@ class brute(characterBase):
             Available moves:
 
             Punch
-            KicK
+            Kick
             Bodyslam
-            Overpower
+            Slice
 
             Select your move: 
             """)
@@ -38,8 +36,8 @@ class brute(characterBase):
                 self.kickAttack(self.target); break
             elif move.lower() == 'bodyslam':
                 self.bodyslamAttack(self.target); break
-            elif move.lower() == 'overpower':
-                self.overpower(self.target); break
+            elif move.lower() == 'slice':
+                self.axeSlice(self.target); break
             else:
                 print('Invalid input.')
 

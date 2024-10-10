@@ -35,7 +35,7 @@ class werewolf(characterBase):
             accuracy = self.accuracy
             hits = randint(0,accuracy)
             if hits != 0:
-                damage = self.strength * 1.2
+                damage = self.getStrengthVariation() * 1.2
                 damage_dealt = target.takeDamage(damage)
                 self.damageCounter(damage_dealt)
                 return damage_dealt
@@ -49,7 +49,7 @@ class werewolf(characterBase):
             accuracy = self.accuracy - 3
             hits = randint(0, accuracy)
             if hits != 0:
-                damage = self.strength * 1.5
+                damage = self.getStrengthVariation() * 1.5
                 damage_dealt = target.takeDamage(damage)
                 self.damageCounter(damage_dealt)
                 return damage_dealt

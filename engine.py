@@ -1,8 +1,10 @@
-from arenacharacters import human, human1, human2
+from arenacharacters import human, human1, human2, dwarf1
 from arenacharacters import knight, knight1, knight2
 from arenacharacters import brute, brute1, brute2
 from arenacharacters import elf, elf1, elf2
 from arenacharacters import werewolf, werewolf1, werewolf2
+from arenacharacters import dwarf, dwarf1, dwarf2
+from arenacharacters.character import characterBase
 
 choosing1 = True
 choosing2 = True
@@ -15,6 +17,7 @@ while playing:
     Brute
     Knight
     Werewolf
+    Dwarf
     """)
 
     while choosing1:
@@ -38,6 +41,10 @@ while playing:
         elif select1.lower() == 'werewolf':
             player1 = werewolf1
             character1 = "Werewolf"
+            break
+        elif select1.lower() == 'dwarf':
+            player1 = dwarf1
+            character1 = "Dwarf"
             break
         else:
             print("Invalid input")
@@ -63,6 +70,10 @@ while playing:
         elif select2.lower() == 'werewolf':
             player2 = werewolf2
             character2 = 'Werewolf'
+            break
+        elif select2.lower() == 'dwarf':
+            player2 = dwarf2
+            character2 = "Dwarf"
             break
         else:
             print("Invalid input")

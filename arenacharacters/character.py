@@ -44,7 +44,7 @@ class characterBase:
     def kickAttack(self, target):
         hits = randint(0, self.accuracy)
         if hits != 0:
-            damage = 1.5 * self.strength
+            damage = 1.5 * self.getStrengthVariation()
             damage_dealt = target.takeDamage(damage)
             self.damageCounter(damage_dealt)
             return damage_dealt
@@ -65,7 +65,7 @@ class characterBase:
             return damage_dealt
         else:
             print(f"{self.usern}'s attack missed!")
-            self_damage = self.health / 13
+            self_damage = self.weight / 22.5
             self.health -= self_damage
             self.selfDamageCounter(self_damage)
             return self_damage
