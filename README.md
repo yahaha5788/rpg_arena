@@ -15,6 +15,6 @@ The `engine.py` file contains all code used to run the program, and it reads the
 contained in `arenacharacters`. `arenacharacters` handles all the moves and functions of the characters.
 
 ## Current Version
-##### Version 1.1.4
-Fixed issue with players being able to have negative health before end of turn.
+#### Version 1.2.0
+Added `charge` move for the `dwarf` character, and created functions for variable `defense`, `focus`, `speed`, and `constitution`. end of turn.
 

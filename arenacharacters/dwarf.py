@@ -16,6 +16,18 @@ class dwarf(characterBase):
             print(f"{self.usern}'s move missed!")
             return 0
 
+    def charge(self, target):
+        hits = randint(0, 5)
+        if hits != 0:
+            chargewt = self.weight / 25
+            damage = self.getStrengthVariation() * chargewt * self.getSpeedVariation()
+            damage /= 80
+            damage_dealt = target.takeDamage(damage)
+            return damage_dealt
+        else:
+            print(f"{self.usern}'s move missed!")
+            return 0
+
     def moveSelect(self):
         choosingmove = True
 
@@ -27,6 +39,7 @@ class dwarf(characterBase):
             Kick
             Bodyslam
             Slice
+            Charge
 
             Select your move: 
             """)
@@ -38,6 +51,8 @@ class dwarf(characterBase):
                 self.bodyslamAttack(self.target); break
             elif move.lower() == 'slice':
                 self.axeSlice(self.target); break
+            elif move.lower() == 'charge':
+                self.charge(self.target); break
             else:
                 print('Invalid input.')
 

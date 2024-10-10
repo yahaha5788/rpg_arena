@@ -5,7 +5,7 @@ from random import randint
 class elf(characterBase):
 
     def magicAttack(self, target):
-        damage = self.focus * 1.3
+        damage = self.getFocusVariation() * 1.3
         damage_dealt = target.takeDamageFromMagic(damage)
         self.damageCounter(damage_dealt)
         return damage_dealt

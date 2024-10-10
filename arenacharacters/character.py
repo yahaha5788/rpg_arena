@@ -1,4 +1,6 @@
 from random import randint
+from statistics import variance
+
 
 class characterBase:
     def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, target, usern, targetn):
@@ -21,12 +23,12 @@ class characterBase:
         return self.health > 0
 
     def takeDamage(self, damage):
-        damage_taken = damage - self.defense
+        damage_taken = damage - self.getDefenseVariation()
         self.health -= damage_taken
         return damage_taken
 
     def takeDamageFromMagic(self, damage):
-        damage_taken = damage - self.constitution
+        damage_taken = damage - self.getConstitutionVariation()
         self.health -= damage_taken
         return damage_taken
 
@@ -34,6 +36,26 @@ class characterBase:
         variation = randint(-3, 3)
         finalstr = self.strength + variation
         return finalstr
+
+    def getDefenseVariation(self):
+        variation = randint(-2, 2)
+        finaldef = self.defense + variation
+        return finaldef
+
+    def getSpeedVariation(self):
+        variation = randint(-1, 2)
+        finalspd = self.defense + variation
+        return finalspd
+
+    def getFocusVariation(self):
+        variation = randint(-2, 2)
+        finalfoc = self.focus + variation
+        return finalfoc
+
+    def getConstitutionVariation(self): #did you know: analysts found a footnote on the U.S. Constitution reading:
+        variation = randint(-1, 1) #"This document may be subject to change at any time"
+        finalconst = self.constitution + variation
+        return finalconst
 
     def punchAttack(self, target):
         damage = 1.3 * self.getStrengthVariation()
