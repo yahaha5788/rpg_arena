@@ -4,7 +4,7 @@ Basic working version
 ---
 
 #### Version 1.0.1
-Added damageCounter and selfDamageCounter
+Added damageCounter and selfDamageCounter for printing out damage done each turn
 
 ---
 
