@@ -1,14 +1,21 @@
+from tabnanny import check
+
 from arenacharacters import human, human1, human2, dwarf1
 from arenacharacters import knight, knight1, knight2
 from arenacharacters import brute, brute1, brute2
 from arenacharacters import elf, elf1, elf2
 from arenacharacters import werewolf, werewolf1, werewolf2
 from arenacharacters import dwarf, dwarf1, dwarf2
-from arenacharacters.character import characterBase
 
 choosing1 = True
 choosing2 = True
 playing = True
+
+def checkIfAlive():
+    if player1.isAlive() == False:
+        exit("Player 2 wins!")
+    elif player2.isAlive() == False:
+        exit('Player 1 wins!')
 
 while playing:
     print("""
@@ -86,21 +93,12 @@ while playing:
 
         print("Player 1's turn")
         player1.moveSelect() #Player 1 attacks
+        checkIfAlive()
         print("Player 2's turn")
         player2.moveSelect() #player 2 attacks
+        checkIfAlive()
         print(f"Player 1's health ({character1}): " + str(player1.health))
         print(f"Player 2's health ({character2}): " + str(player2.health))
         turn_number += 1
         print(f'Number of turns so far: {turn_number}')
 
-    if player1.isAlive and not player2.isAlive():
-        print("Player 1 wins!")
-
-    elif player2.isAlive and not player1.isAlive():
-        print("Player 2 wins!")
-
-    playagain = input("Would you like to play again? Y/N")
-    if playagain.lower == 'y':
-        print("Again!")
-    else:
-        playing = False
