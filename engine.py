@@ -1,20 +1,8 @@
-from arenacharacters import human
-from arenacharacters import knight
-from arenacharacters import brute
-from arenacharacters import elf
-from arenacharacters import werewolf
-
-#initializations for characters
-human1 = human("Human1", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180, 'player2', 'Player 1', 'Player 2')
-human2 = human("Human2", 11, 100, 100, 10, 10, 10,10 ,17, 8, 180,'player1', 'Player 2', 'Player 1')
-knight1 = knight("Knight1", 13, 100, 100, 11, 7, 9, 8, 13, 9, 215, 'player2', 'Player 1', 'Player 2')
-knight2 = knight("Knight2", 13, 100, 100, 11, 7, 9, 8, 13, 9, 215,'player1', 'PLayer 2', 'Player 1')
-brute1 = brute("Brute1", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,'player2', "Player 1", 'Player 2')
-brute2 = brute("Brute2", 15, 90, 90, 9, 9, 8, 7, 14, 8, 195,'player1', 'Player 2', 'Player 1')
-elf1 = elf("Elf1", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145, 'player2', 'Player 1', 'Player 2')
-elf2 = elf("Elf2", 9, 100, 100, 10, 13, 12, 13, 11, 8, 145,'player1', 'Player 2', 'Player 1')
-werewolf1 = werewolf("Werewolf1", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, False, 6, 0, 'player2', 'Player 1', 'Player 2')
-werewolf2 = werewolf("Werewolf2", 11, 100, 100, 9, 12, 9, 8, 12, 9, 170, False, 6, 0, 'player1', 'Player 2', 'Player 1')
+from arenacharacters import human, human1, human2
+from arenacharacters import knight, knight1, knight2
+from arenacharacters import brute, brute1, brute2
+from arenacharacters import elf, elf1, elf2
+from arenacharacters import werewolf, werewolf1, werewolf2
 
 choosing1 = True
 choosing2 = True
@@ -79,15 +67,16 @@ while playing:
         else:
             print("Invalid input")
 
-    player1.target = player2
+    player1.target = player2 #assigns the targets
     player2.target = player1
+    turn_number = 0
 
     while player1.isAlive() and player2.isAlive():
-        turn_number = 0
+
         print("Player 1's turn")
-        player1.moveSelect()
+        player1.moveSelect() #Player 1 attacks
         print("Player 2's turn")
-        player2.moveSelect()
+        player2.moveSelect() #player 2 attacks
         print(f"Player 1's health ({character1}): " + str(player1.health))
         print(f"Player 2's health ({character2}): " + str(player2.health))
         turn_number += 1
