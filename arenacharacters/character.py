@@ -52,8 +52,8 @@ class characterBase:
         finalfoc = self.focus + variation
         return finalfoc
 
-    def getConstitutionVariation(self): #did you know: analysts found a footnote on the U.S. Constitution reading:
-        variation = randint(-1, 1) #"This document may be subject to change at any time"
+    def getConstitutionVariation(self): #did you know: analysts found a footnote on the United States Constitution reading:
+        variation = randint(-1, 1) #              "This document may be subject to change at any time"
         finalconst = self.constitution + variation
         return finalconst
 

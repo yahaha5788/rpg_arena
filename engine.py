@@ -1,11 +1,10 @@
-from tabnanny import check
-
-from arenacharacters import human, human1, human2, dwarf1
+from arenacharacters import human, human1, human2
 from arenacharacters import knight, knight1, knight2
 from arenacharacters import brute, brute1, brute2
 from arenacharacters import elf, elf1, elf2
 from arenacharacters import werewolf, werewolf1, werewolf2
 from arenacharacters import dwarf, dwarf1, dwarf2
+from arenacharacters import golem, golem1, golem2
 
 choosing1 = True
 choosing2 = True
@@ -25,6 +24,7 @@ while playing:
     Knight
     Werewolf
     Dwarf
+    Golem
     """)
 
     while choosing1:
@@ -52,6 +52,10 @@ while playing:
         elif select1.lower() == 'dwarf':
             player1 = dwarf1
             character1 = "Dwarf"
+            break
+        elif select1.lower() == 'golem':
+            player1 = golem1
+            character1 = 'Golem'
             break
         else:
             print("Invalid input")
@@ -81,6 +85,10 @@ while playing:
         elif select2.lower() == 'dwarf':
             player2 = dwarf2
             character2 = "Dwarf"
+            break
+        elif select2.lower() == 'golem':
+            player2 = golem2
+            character2 = 'Golem'
             break
         else:
             print("Invalid input")
