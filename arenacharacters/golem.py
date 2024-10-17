@@ -60,3 +60,33 @@ class golem(characterBase):
         else:
             print("You do not have enough rock to use this move!")
             return 0
+
+    def moveSelect(self):
+        choosingmove = True
+
+        while choosingmove:
+            move = input("""
+            Available moves:
+
+            Punch
+            KicK
+            Bodyslam
+            Rock Smash
+            Rock Throw 
+
+            Select your move: 
+            """)
+            if move.lower() == 'punch':
+                self.punchAttack(self.target); break
+            elif move.lower() == 'kick':
+                self.kickAttack(self.target); break
+            elif move.lower() == 'bodyslam':
+                self.bodyslamAttack(self.target); break
+            elif move.lower() == 'rock smash':
+                self.rockSmash(self.target); break
+            elif move.lower() == 'rock throw':
+                self.rockThrow(self.target); break
+            else:
+                print('Invalid input.')
+
+        return 0
