@@ -22,7 +22,11 @@ class golem(characterBase):
         self.isgolem = isgolem
 
     def rockWtVariation(self):
-        r = randint(10, 17)
+        r = randint(15, 20)
+        return r
+
+    def rockWtVariation2(self): # for golem.rockSmash(), because rockSmash() is supposed to have you lose less rock than golem.rockThrow()
+        r = randint(6, 12)
         return r
 
     def loseRock(self, r):
@@ -38,7 +42,7 @@ class golem(characterBase):
             avgmultiplier = self.getStrengthVariation() * wt
             damage = avgmultiplier / 15
             damage_dealt = target.takeDamage(damage)
-            self.loseRock(self.rockWtVariation())
+            self.loseRock(self.rockWtVariation2())
             return damage_dealt
         else:
             print(f"You don't have enough rock to use this move!")
@@ -48,9 +52,9 @@ class golem(characterBase):
         if self.isgolem:
             hits = randint(0, 7)
             if hits != 0:
-                rockwt = randint(65, 75)
+                rockwt = self.rockWtVariation()
                 damage = self.getStrengthVariation() * rockwt
-                damage /= 58
+                damage /= 29
                 damage_dealt = target.takeDamage(damage)
                 self.loseRock(rockwt)
                 return damage_dealt

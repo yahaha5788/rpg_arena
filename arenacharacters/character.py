@@ -24,8 +24,11 @@ class characterBase:
 
     def takeDamage(self, damage):
         damage_taken = damage - self.getDefenseVariation()
-        self.health -= damage_taken
-        return damage_taken
+        if damage_taken < 0:
+            return 0
+        else:
+            self.health -= damage_taken
+            return damage_taken
 
     def takeDamageFromMagic(self, damage):
         damage_taken = damage - self.getConstitutionVariation()
