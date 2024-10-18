@@ -24,7 +24,7 @@ while playing:
     Knight
     Werewolf
     Dwarf
-    Golem (Untested)
+    Golem
     """)
 
     while choosing1:

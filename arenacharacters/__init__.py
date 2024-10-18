@@ -18,5 +18,5 @@ werewolf1 = werewolf("Werewolf1", 11, 100, 100, 9, 12, 9, 8, 12, 9, 160, False, 
 werewolf2 = werewolf("Werewolf2", 11, 100, 100, 9, 12, 9, 8, 12, 9, 160, False, 6, 0, 'player1', 'Player 2', 'Player 1')
 dwarf1 = dwarf("Dwarf1", 13, 90, 90, 13, 8, 8, 8, 12, 8, 200, 'player2', 'Player 1', 'Player 2')
 dwarf2 = dwarf("Dwarf2", 13, 90, 90, 13, 8, 8, 8, 12, 8, 200, 'player1', 'Player 2', 'Player 1')
-golem1 = golem("Golem1", 17, 130, 130, 16, 4, 5, 4, 7, 9, 345, 'player2', 'Player 1', 'Player 2', 190, True)
-golem2 = golem("Golem2", 17, 130, 130, 16, 4, 5, 5, 7, 9, 345, 'player1', 'Player 2', 'Player 1', 190, True)
+golem1 = golem("Golem1", 17, 130, 130, 14, 4, 5, 4, 7, 9, 345, 'player2', 'Player 1', 'Player 2', 190, True)
+golem2 = golem("Golem2", 17, 130, 130, 14, 4, 5, 5, 7, 9, 345, 'player1', 'Player 2', 'Player 1', 190, True)

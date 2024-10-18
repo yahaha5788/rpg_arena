@@ -1,3 +1,4 @@
+from traceback import TracebackException
 from .character import characterBase
 from random import randint
 
@@ -54,8 +55,13 @@ class golem(characterBase):
             if hits != 0:
                 rockwt = self.rockWtVariation()
                 damage = self.getStrengthVariation() * rockwt
-                damage /= 29
-                damage_dealt = target.takeDamage(damage)
+                damage /= 20
+                try:
+                    target.loseRock(self.rockWtVariation2())
+                    damage += 16
+                    damage_dealt = target.takeDamage(damage)
+                except TracebackException:
+                    damage_dealt = target.takeDamage(damage)
                 self.loseRock(rockwt)
                 return damage_dealt
             else:
