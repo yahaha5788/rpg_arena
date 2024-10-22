@@ -4,8 +4,9 @@ from random import randint
 
 class golem(characterBase):
 
-    def __init__(self, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, target, usern, targetn, minweight, isgolem):
+    def __init__(self, type, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, target, usern, targetn, minweight, isgolem):
         self.name = name
+        self.type = type
         self.strength = strength #multiplier for physical moves, should be around 10
         self.health = health #health should be at least 100
         self.maxhealth = maxhealth #maxhealth should be the same as health, used for healing moves

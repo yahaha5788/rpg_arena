@@ -17,7 +17,8 @@ def checkIfAlive():
         exit('Player 1 wins!')
 
 while playing:
-    print("""
+    print(f"""
+    
     Human
     Elf
     Brute
@@ -25,37 +26,31 @@ while playing:
     Werewolf
     Dwarf
     Golem
+    
     """)
 
     while choosing1:
         select1 = input("Player 1, select your character: """)
         if select1.lower() == 'human':
             player1 = human1
-            character1 = "Human"
             break
         elif select1.lower() == 'elf':
             player1 = elf1
-            character1 = "Elf"
             break
         elif select1.lower() == 'brute':
             player1 = brute1
-            character1 = "Brute"
             break
         elif select1.lower() == 'knight':
             player1 = knight1
-            character1 = "Knight"
             break
         elif select1.lower() == 'werewolf':
             player1 = werewolf1
-            character1 = "Werewolf"
             break
         elif select1.lower() == 'dwarf':
             player1 = dwarf1
-            character1 = "Dwarf"
             break
         elif select1.lower() == 'golem':
             player1 = golem1
-            character1 = 'Golem'
             break
         else:
             print("Invalid input")
@@ -64,31 +59,24 @@ while playing:
         select2 = input("Player 2, select your character: ")
         if select2.lower() == 'human':
             player2 = human2
-            character2 = "Human"
             break
         elif select2.lower() == 'elf':
             player2 = elf2
-            character2 = "Elf"
             break
         elif select2.lower() == 'brute':
             player2 = brute2
-            character2 = "Brute"
             break
         elif select2.lower() == 'knight':
             player2 = knight2
-            character2 = "Knight"
             break
         elif select2.lower() == 'werewolf':
             player2 = werewolf2
-            character2 = 'Werewolf'
             break
         elif select2.lower() == 'dwarf':
             player2 = dwarf2
-            character2 = "Dwarf"
             break
         elif select2.lower() == 'golem':
             player2 = golem2
-            character2 = 'Golem'
             break
         else:
             print("Invalid input")
@@ -105,8 +93,8 @@ while playing:
         print("Player 2's turn")
         player2.moveSelect() #player 2 attacks
         checkIfAlive()
-        print(f"Player 1's health ({character1}): " + str(player1.health))
-        print(f"Player 2's health ({character2}): " + str(player2.health))
+        print(f"Player 1's health ({player1.type}): " + str(player1.health))
+        print(f"Player 2's health ({player2.type}): " + str(player2.health))
         turn_number += 1
         print(f'Number of turns so far: {turn_number}')
 
