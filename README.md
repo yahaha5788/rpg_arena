@@ -6,7 +6,7 @@ This is a text-based battle arena with multiple characters and moves.
 Only two players can play at one time.
 
 ## Features
-Six different characters - Human, Elf, Brute, Knight, Werewolf, Dwarf\
+Seven different characters - Human, Elf, Brute, Knight, Werewolf, Dwarf, Golem\
 Entirely text-based\
 Different moves and stats for each character
 
