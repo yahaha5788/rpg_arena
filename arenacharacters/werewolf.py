@@ -3,9 +3,9 @@ from random import randint
 
 class werewolf(characterBase):
 
-    def __init__(self, type, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, morphed, morphtimeavailable, morphturnsleft, target, usern, targetn):
+    def __init__(self, c, name, strength, health, maxhealth, defense, speed, focus, constitution, dexterity, accuracy, weight, target, usern, targetn, morphed, morphtimeavailable, morphturnsleft):
         self.name = name
-        self.type = type
+        self.c = c
         self.strength = strength #multiplier for physical moves, should be around 10
         self.health = health #health should be at least 100
         self.maxhealth = maxhealth #maxhealth should be the same as health, used for healing moves
